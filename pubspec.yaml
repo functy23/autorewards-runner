@@ -1,0 +1,41 @@
+name: rewards_runner
+description: "AutoRewards Runner - Bing Rewards / miYoushe / WorkBuddy automation (local only)."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # WebView with UserScript support (Tampermonkey-style injection)
+  flutter_inappwebview: ^6.1.5
+
+  # networking
+  http: ^1.2.2
+  # HTML parsing for WorkBuddy auth fallback / misc scraping
+  html: ^0.15.5
+
+  # local encrypted/structured storage (all data stays on device)
+  shared_preferences: ^2.3.4
+
+  # scheduling helpers
+  flutter_timezone: ^3.0.1
+
+  # QR 登录（米游社扫码）
+  qr_flutter: ^4.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/userscripts/
+    - assets/icons/
