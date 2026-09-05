@@ -229,8 +229,11 @@ assets/icons/                         # 官方图标：workbuddy(icns→png)、m
 | 文件 | 内容 | 何时读 |
 |------|------|--------|
 | `docs/REVERSE_REPORT.md` | 米游社接口/DS 算法/请求头、WorkBuddy 文件与接口、Bing 脚本改造要点、防检测策略 | 改服务层、更新 salt/接口前 |
-| `docs/BUILD_NOTES.md` | 本机全部踩坑：AGP9 proguard、JVM target、撇号路径、SDK 许可、QR 接口实测、QrPainter、CgBI PNG | 构建失败、加新依赖前 |
-| `README.md` | 面向用户的使用说明 | 写发布说明时对齐 |
+| `docs/BUILD_NOTES.md` | 本机全部踩坑：AGP9 proguard、JVM target、撇号路径、SDK 许可、QR 接口实测、QrPainter、CgBI PNG、getTokenBySToken 风控、UserScript 注入 | 构建失败、加新依赖前 |
+| `README.md` | 面向用户的使用说明 + 致谢与参考项目（MiyoQian/MihoyoBBSTools/aShellYou 等上游链接） | 写发布说明时对齐；上游 salt 失效时找最新值 |
+
+上游仓库（GitHub: functy23/autorewards-runner）。米游社 salt 轮换失效时，
+参照 README「致谢与参考项目」里的上游项目更新 `ds_sign.dart`。
 
 ---
 
