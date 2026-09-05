@@ -170,3 +170,25 @@ rewards_runner/
 - `flutter_inappwebview_android 1.1.3` 的 build.gradle 使用 AGP9 已移除的
   `proguard-android.txt`：本仓库已说明修法（替换为 `proguard-android-optimize.txt`），
   若重新 `flutter pub get` 后报同样错误，按 docs/REVERSE_REPORT.md 附录 A 修补。
+
+---
+
+## 8. 致谢与参考项目
+
+本项目的实现大量参考/移植了以下开源项目与脚本，感谢这些作者的慷慨分享：
+
+| 项目 | 用途 |
+| --- | --- |
+| [MiyoQian（米游签）](https://github.com/Marchen-orz/MiyoQian) | 米游社任务核心实现参考与移植来源：游戏社区签到（luna 接口/act_id/角色/奖励）、米游币任务流程（社区签到/看帖/点赞/分享）、新一代 DS salt 配对、点赞新端点（`post/api/post/upvote` 带 gids） |
+| [MihoyoBBSTools](https://github.com/Womsxd/MihoyoBBSTools) | 米游社接口与 DS 签名算法的逆向参照（salt/版本对应关系、请求头、云游戏 Token 获取方法） |
+| [aShellYou](https://github.com/DP-Hridayan/aShellYou) | 日志窗口与设置页的 UI 设计移植来源（LogEntryRow 行设计、settings-dsl 连体卡片组） |
+| [workbuddy-checkin](https://github.com/Coco-katarina/workbuddy-checkin)（原始 skill：[cat-xierluo/legal-skills](https://github.com/cat-xierluo/legal-skills)） | WorkBuddy 签到接口与桌面端登录态机制的逆向来源 |
+| [Microsoft Bing Rewards 自动搜索助手](https://greasyfork.org/zh-CN/scripts/538825)（作者 WretchedSniper，MIT） | App 内置的 Bing Rewards 油猴脚本本体（v1.3.2 原版，见 `assets/userscripts/`） |
+| [GetToken](https://github.com/HolographicHat/GetToken) | 扫码登录/Token 交换的排障参考 |
+| [UIGF 米游社 API 文档](https://uigf.org/zh/mihoyo-api-collection/hoyolab/user/token.html) | Token 相关接口的社区文档 |
+
+主要依赖：[Flutter](https://flutter.dev)、[flutter_inappwebview](https://github.com/pichillilorenzo/flutter_inappwebview)、[http](https://pub.dev/packages/http)、[qr_flutter](https://pub.dev/packages/qr_flutter)、[shared_preferences](https://pub.dev/packages/shared_preferences)。
+
+> 以上项目版权归原作者所有；本项目对其的使用方式见各项目开源协议。米游社相关接口
+> 的 salt/版本会随官方客户端更新而轮换，失效时请参照上述上游项目的最新值更新
+> `lib/services/mihoyobbs/ds_sign.dart`。
