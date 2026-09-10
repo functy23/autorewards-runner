@@ -1,4 +1,6 @@
-# AutoRewards Runner
+# AutoRewards Runner（已归档）
+
+> **本仓库已停止维护。** 请改用 [functy23/fewards](https://github.com/functy23/fewards)（Android 原生当前版）。
 
 一个 Flutter 跨平台（Android + macOS）自动任务 App：
 
